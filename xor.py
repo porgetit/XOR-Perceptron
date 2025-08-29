@@ -2,6 +2,7 @@ import numpy as np
 from perceptron import Perceptron
 
 def _to_2d(X, n_features):
+    """Asegura que X es (n, n_features)"""
     X = np.asarray(X)
     if X.ndim == 1:
         X = X.reshape(1, -1)
