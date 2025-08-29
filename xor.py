@@ -41,11 +41,11 @@ class XORGate:
         y_or = np.array([0, 1, 1, 1])
         self.p_or.train(X, np.where(y_or == 1, 1, -1))
 
-        # AND sobre entradas originales
+        # AND
         y_and = np.array([0, 0, 0, 1])
         self.p_and1.train(X, np.where(y_and == 1, 1, -1))
 
-        # NOT unario
+        # NOT
         X_not = np.array([[0], [1]])
         y_not = np.array([1, 0])
         self.p_not.train(X_not, np.where(y_not == 1, 1, -1))
