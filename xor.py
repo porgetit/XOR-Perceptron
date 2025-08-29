@@ -1,9 +1,6 @@
 import numpy as np
 from perceptron import Perceptron
 
-# === Asume que ya definiste esta clase tal cual la compartiste ===
-# class Perceptron: ...
-
 # Helpers lógicos fijando pesos a mano (sin entrenar)
 class LogicPerceptron(Perceptron):
     @staticmethod
@@ -28,6 +25,7 @@ class LogicPerceptron(Perceptron):
         return p
 
 def _to_2d(X, n_features):
+    """Asegura que X es (n, n_features)"""
     X = np.asarray(X)
     if X.ndim == 1:
         X = X.reshape(1, -1)
